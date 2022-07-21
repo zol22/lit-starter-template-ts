@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+  <Link>
     <meta charset="utf-8" />
-    <title>Lit Starter Kit</title>
+    <title>&lt;my-element> Demo</title>
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="./node_modules/lit/polyfill-support.js"></script>
+    <script type="module" src="./lib/main.js"></script>
+    <style>
+      p {
+        border: solid 1px blue;
+        padding: 8px;
+      }
+    </style>
   </head>
   <body>
-    <a href="/dev/index.html">Component Demo</a>
+    <nav>
+      <a href="/">Todos</a>
+    </nav>
+    <main></main>
+    <script>
+      // HACK(keanulee): The Redux package assumes `process` exists - mock it here before
+      // the module is loaded.
+      window.process = {
+        env: {
+          NODE_ENV: 'production',
+        },
+      };
+    </script>
   </body>
 </html>

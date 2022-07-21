@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.4",
   "description": "A simple web component",
-  "main": "my-element.js",
-  "module": "my-element.js",
+  "main": "./lib/main.js",
+  "module": "./lib/main.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -40,8 +40,22 @@
   ],
   "author": "Google LLC",
   "license": "BSD-3-Clause",
+  "files": [
+    "*.js"
+  ],
   "dependencies": {
-    "lit": "^2.2.4"
+    "@reduxjs/toolkit": "^1.8.3",
+    "@vaadin/button": "^23.1.3",
+    "@vaadin/charts": "^23.1.4",
+    "@vaadin/checkbox": "^23.1.3",
+    "@vaadin/radio-group": "^23.1.3",
+    "@vaadin/router": "^1.7.4",
+    "@vaadin/text-field": "^23.1.3",
+    "lit": "^2.2.7",
+    "nanoid": "^4.0.0",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.2.0",
+    "reselect": "^4.1.6"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
@@ -50,6 +64,7 @@
     "@open-wc/testing": "^3.1.5",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@types/estree": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
     "@web/dev-server": "^0.1.31",
